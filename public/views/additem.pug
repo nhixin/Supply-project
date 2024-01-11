@@ -1,0 +1,37 @@
+html
+    head
+        a(href="/") Home page 
+        | #{" "} | 
+        a(href="/bulk") See bulk page
+        | #{" "} | 
+        a(href="/items") See all items
+        br 
+
+        title Add more items 
+        h1 Add an item of your choice
+        link(rel='stylesheet', href='/style.css')
+        script(src="/js/createItem.js")
+
+    body
+        div(id="itemForm")
+            label(for="addName") Enter the name of the item:  
+            input(type="textbox" id="addName")
+            br
+            label(for="addVendor") Enter the vendor:  
+            input(type="textbox" id="addVendor")
+            br
+            label(for="addCtg") Enter the category:  
+            input(type="textbox" id="addCtg")
+            br
+            label(for="addPrice") Enter the price of the item:  
+            input(type="number" min="0" step="0.01" id="addPrice")
+            br
+            label(for="addStock") Enter the amount of stock:  
+            input(type="number" min="0" id="addStock")
+            br
+            label(for="addDesc") Enter the description:  
+            input(type="textbox" id="addDesc")                
+            br
+
+            button(type="button" id= "addButton" onclick="submit()") Add this item
+            br

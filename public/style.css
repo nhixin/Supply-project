@@ -1,0 +1,78 @@
+body {
+    font-family: American Typewriter, serif;
+    background-color: rgb(188, 217, 227);
+    line-height: 1.75; 
+}
+
+p {
+    font-size: large;
+}
+
+a {
+    font-size: large;
+    color: rgb(149, 61, 91);
+}
+
+h1 {
+    position: relative;
+    left: 1%;
+    color: rgb(79, 97, 66); 
+    font-size: 50px;
+    width: 62%;
+    line-height: 140%;
+}
+
+h3 {
+    position: relative;
+    font-size: large;
+    left: 1%;
+}
+
+ol {
+    font-weight: bold;
+    color: rgb(79, 97, 66); 
+}
+
+#left, #itemForm, #bulkPage {
+    position: relative;
+    left: 3%;
+    width:  58%; 
+    line-height: 300%;
+}
+
+#right {
+    position: fixed;
+    text-align: center;
+    padding: 40px 0;
+    float: right;
+    top: 16%;
+    width:  30%;
+    right: 2%;
+    height: auto;
+    line-height: 300%;
+    border: 10px solid rgb(120,134,107);
+    background-color:  rgb(182, 199, 163);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 1px rgba(138, 136, 136, 0.794);
+    color: #ffffff;
+    overflow: auto;
+}
+
+button {
+    position:  relative;
+    font-size: 16px;
+    top: 10px;
+    border-radius: 8px;
+    height: 38px;
+    font-family: American Typewriter, serif;
+    border: 5px solid rgb(120,134,107);
+    background-color: rgb(182, 199, 163);
+    color: #ffffff;
+}
+
+button:hover {
+    font-family: American Typewriter, serif;
+    border: 5px solid rgb(183, 160, 168);
+    background-color: rgb(255, 227, 237);
+    color: rgb(0, 0, 0);
+}

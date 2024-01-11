@@ -1,0 +1,20 @@
+html 
+    head 
+        a(href="/") Home page 
+        | #{" "} | 
+        a(href="/bulk") See bulk page
+        | #{" "} | 
+        a(href="/additem") Add more supply items
+        br 
+
+        title List of supply items 
+        h1 Here is the list of supply items
+        link(rel='stylesheet', href='/style.css') 
+
+    body
+        ol#left
+            each collection in pugData
+                li
+                    a(href=`/items/${collection["_id"]}`) #{collection["name"]}
+                    br
+                    br

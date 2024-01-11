@@ -1,0 +1,55 @@
+html
+    head
+        a(href="/") Home page 
+        | #{" "} | 
+        a(href="/bulk") See bulk page
+        | #{" "} | 
+        a(href="/additem") Add more supply items
+        | #{" "} | 
+        a(href="/items") See all items
+        br 
+
+        title Inidividual item 
+        h1(id="name") Details of the item #{pugData.name}
+        link(rel='stylesheet', href='/style.css')
+        script(src="/js/itemOperation.js") 
+
+    body
+        div#left
+            p#id <strong>The id of this item</strong>: #{pugData._id}
+            p#ctg <strong>Category</strong>: #{pugData.category}
+            p#vendor <strong>Vendor</strong>: #{pugData.vendor}
+            p#price <strong>Price</strong>: $#{pugData.price}
+            p#stock <strong>Stock</strong>: #{pugData.stock}
+            p#descr <strong>Description</strong>: #{pugData.description}
+            if pugData.rating[0] === -1
+                p#avrRate <strong>Average Rating</strong>: none 
+            else 
+                p#avrRate <strong>Average Rating</strong>: #{pugData.rating}
+
+        div(id="right")
+            label(for="chgName") Change the name of the item:  
+            input(type="textbox" id="chgName")
+            br
+            label(for="chgVendor") Change the vendor:  
+            input(type="textbox" id="chgVendor")
+            br
+            label(for="chgCtg") Change the category:  
+            input(type="textbox" id="chgCtg")
+            br
+            label(for="chgPrice") Change the price of the item:  
+            input(type="number" min="0" step="0.01" id="chgPrice")
+            br
+            label(for="chgStock") Change the amount of stock:  
+            input(type="number" min="0" step="1" id="chgStock")
+            br
+            label(for="chgDesc") Change the description:  
+            input(type="textbox" id="chgDesc")                
+            br
+            label(for="addRating") Rate the product:  
+            input(type="number" min="0" max="5" step="0.01" id="addRating")
+            br
+            
+            button(type="button" class= "updatedButton" onclick=`updateItem('${pugData._id}')`) Update
+            | #{" "}      
+            button(type="button" class= "deletedButton" onclick=`deleteItem('${pugData._id}')`) Delete item

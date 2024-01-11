@@ -1,0 +1,33 @@
+html
+    head
+        a(href="/") Home page 
+        | #{" "} | 
+        a(href="/additem") Add more supply items
+        | #{" "} | 
+        a(href="/items") See all items
+        br 
+
+        title Bulk page 
+        h1(id="name") Page to bulk updates on the database and add sales 
+        link(rel='stylesheet', href='/style.css')
+        script(src="js/stockAndSale.js")
+
+    body
+        div(id="bulkPage")
+            label(for="bVendor") Enter the vendor:  
+            input(type="textbox" id="bVendor")
+            br
+            label(for="bCtg") Enter the category:  
+            input(type="textbox" id="bCtg")
+            br
+            label(for="bStock") Enter the amount of stock:  
+            input(type="number" min="0" id="bStock")
+            br
+            label(for="bSale") Enter the sale:  
+            input(type="number" min="0" max="100" step="1" id="bSale")
+            br
+        
+            button(type="button" id= "addButton" onclick="addStock()") Add Stock
+            | #{" "}  
+            button(type="button" id= "addButton" onclick="saleData()") Sale
+
